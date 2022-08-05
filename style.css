@@ -1,0 +1,238 @@
+html {
+  background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
+  background-color: white;
+  background-blend-mode: difference;
+  background-size: cover;
+  width: 1500px;
+  height: 1410px;
+}
+
+.main {
+  position: absolute;
+  top: 0%;
+  right: 0.5%;
+  transform: ease-in-out;
+  width: 1700px;
+  height: 1410px;
+  background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
+  clip-path: polygon(36% 53%, 36% 27%, 36% 0, 63% 0, 63% 3%, 63% 44%, 63% 49%, 63% 66%, 63% 100%, 0 100%, 0 76%, 36% 76%);
+
+
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: rgba(47, 79, 79, 0.4);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-content: flex-start;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px black;
+  font-weight: bold;
+  color: #f5f5f7;
+}
+.title-bin {
+  font-size: 30px;
+  color: darkslategray;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+#ETHUSDT_avg_price {
+  display: flex;
+  font-size: 2em;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f5f5f7;
+  color: darkslategray;
+}
+
+
+#BTCUSDT_avg_price {
+  display: flex;
+  font-size: 2em;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f5f5f7;
+  color: darkslategray;
+}
+
+#BNBUSDT_avg_price {
+  display: flex;
+  font-size: 2em;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f5f5f7;
+  color: darkslategray;
+}
+
+#BNB_klines {
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-content: flex-start;
+  border: black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 2em;
+  box-shadow: 0px 0px 10px black;
+  font-weight: bold;
+  color: #f5f5f7;
+  font-variant: common-ligatures;
+  background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
+  background-size: cover;
+  display: none;
+}
+
+.bnb_name {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#bnb_btn {
+  background-color: #f5f5f7;
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  margin-left: 18em;
+  font-size: 1em;
+  font-weight: bold;
+  color: darkslategray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-variant: common-ligatures;
+  pointer-events: visible;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: color 0.6s ease-in-out;
+  transition: color 1s;
+}
+
+#bnb_btn:hover {
+  background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
+  color: #f5f5f7;
+}
+#BTC_klines {
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-content: flex-start;
+  border: black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 2em;
+  box-shadow: 0px 0px 10px black;
+  font-weight: bold;
+  color: #f5f5f7;
+  font-variant: common-ligatures;
+  background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
+  background-size: cover;
+  display: none;
+}
+
+.btc_name {
+  text-align: center;
+  font-size: 1.5em;
+}
+#btc_btn {
+  background-color: #f5f5f7;
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  margin-left: 18em;
+  font-size: 1em;
+  font-weight: bold;
+  color: darkslategray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-variant: common-ligatures;
+  pointer-events: visible;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: color 0.6s ease-in-out;
+  transition: color 1s;
+}
+
+#btc_btn:hover {
+  background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
+  color: #f5f5f7;
+}
+
+#ETH_klines {
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-content: flex-start;
+  border: black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 2em;
+  box-shadow: 0px 0px 10px black;
+  font-weight: bold;
+  color: #f5f5f7;
+  font-variant: common-ligatures;
+  background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
+  background-size: cover;
+  display: none;
+}
+.eth_name {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#eth_btn {
+  background-color: #f5f5f7;
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  margin-left: 18em;
+  font-size: 1em;
+  font-weight: bold;
+  color: darkslategray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-variant: common-ligatures;
+  pointer-events: visible;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: color 0.6s ease-in-out;
+  transition: color 1s;
+}
+
+#eth_btn:hover {
+  background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
+  color: #f5f5f7;
+}
