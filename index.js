@@ -38,17 +38,8 @@ fetch(
     }
   }
 
-  let data3 = await fetch(
-    "https://api.binance.com/api/v3/avgPrice?symbol=BNBUSDT",)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      return data;
-    });
-  
-    document.getElementById("BNBUSDT_avg_price").innerHTML = Math.round(data3.price) + " BNB/USDT";
+  //BNB CURRENT AVERAGE PRICE
 
-  //BTC CURRENT AVERAGE PRICE
   let wsBnb = new WebSocket('wss://stream.binance.com:9443/ws/bnbusdt@trade');
   let stockPriceElementBnb = document.getElementById('BNBUSDT_avg_price');
   let lastPriceBnb = null;
@@ -353,29 +344,3 @@ btc_btn.addEventListener('click', (e) =>  {
    BTC_klines.style.display = "none";
      }
  });
-
-
-/*
- ws.onmessage = (event) => {
-  let stockObject = JSON.parse(event.data);
-  let price = parseFloat(stockObject.p).toFixed(2);
-  stockPriceElement.innerText = price;
-  stockPriceElement.style.color = !lastPrice || lastPrice === price ? 'black' : price > lastPrice ? 'green' : 'red';
-  lastPrice = price;
-  console.log(event.data);
-}
-*/
-/*
-ws.onopen = () => {
-  ws.onmessage = (event) => {
-    let stockObject = JSON.parse(event.data);
-    let price = parseFloat(stockObject.p).toFixed(2);
-    stockPriceElement.innerText = price;
-    stockPriceElement.style.color = !lastPrice || lastPrice === price ? 'black' : price > lastPrice ? 'green' : 'red';
-    console.log(event.data + "tutaj");
-    lastPrice = price;
-  }
-}
-
-
-*/
