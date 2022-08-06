@@ -7,6 +7,9 @@ html {
   height: 1410px;
 }
 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
 .main {
   position: absolute;
   top: 0%;
@@ -16,8 +19,6 @@ html {
   height: 1410px;
   background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
   clip-path: polygon(36% 53%, 36% 27%, 36% 0, 63% 0, 63% 3%, 63% 44%, 63% 49%, 63% 66%, 63% 100%, 0 100%, 0 76%, 36% 76%);
-
-
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5);
   flex-wrap: wrap;
@@ -57,7 +58,7 @@ html {
   border-radius: 5px;
   padding: 5px;
   background-color: #f5f5f7;
-  color: darkslategray;
+  color: black;
 }
 
 
