@@ -5,6 +5,7 @@ html {
   background-size: cover;
   width: 1500px;
   height: 1410px;
+  
 }
 
 *, ::after, ::before {
@@ -236,4 +237,10 @@ html {
 #eth_btn:hover {
   background-image: url("https://c.wallhere.com/photos/17/0b/dark_abstract_monochrome_texture-2036485.jpg!d");
   color: #f5f5f7;
+}
+
+.title {
+  color: darkslategray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-variant: common-ligatures;
 }

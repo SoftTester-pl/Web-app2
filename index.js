@@ -57,28 +57,31 @@ fetch(
 //coinmarketcap in progress
 
 /*
-let response = await fetch( "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&convert=USD&CMC_PRO_API_KEY=7107bfa7-645c-4f2e-a50e-0d386bd9f66c",{
-   
-    headers:{
-          "CMC_PRO_API_KEY": "7107bfa7-645c-4f2e-a50e-0d386bd9f66c",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&convert=USD&CMC_PRO_API_KEY=7107bfa7-645c-4f2e-a50e-0d386bd9f66c",
-          "Accept-Charset": "utf-8",
-          "Accept-Encoding": "deflate, gzip",
-          "Connection": "keep-alive",
-          "Host": "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&convert=USD&CMC_PRO_API_KEY=7107bfa7-645c-4f2e-a50e-0d386bd9f66c",
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"
-          
-            }       
-            
-          })
-          
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      return data;
-  }) 
-*/
+import {apiKey} from './key.js';
+
+request( "GET","https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&convert=USD&CMC_PRO_API_KEY=" + apiKey.key)
+.then((r1) => {
+  console.log(response)
+}).catch()
+
+function request(method, url) {
+   return new Promise((resolve, reject) => {
+      let xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.onload = () => {
+          if (xhr.status >= 200 && xhr.status < 300) {
+              resolve(xhr.response);
+          } else {
+              reject(xhr.statusText);
+          }
+      };
+      xhr.onerror = () => {
+          reject(xhr.statusText);
+      };
+      xhr.send();
+  });
+}
+*/    
 
 let data4 = await fetch(
   "https://api.binance.com/api/v3/klines?symbol=BNBUSDT&interval=1d&limit=1",
@@ -109,7 +112,6 @@ let data4 = await fetch(
         console.log(data);
         return data;
       });
-
 
 //this is the first method of taking the data from the api and putting it into the html
 
@@ -246,7 +248,6 @@ document.getElementById("BTC_klines").appendChild(p10);
     let formattedTime = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
     return formattedTime;
   }
-
 }
 
 const ethData = (data) => {
@@ -293,7 +294,6 @@ let p8 = document.createElement("p");
 p8.innerHTML = " Number Of Trades: " + Math.floor(data5[0][8]);
 document.getElementById("ETH_klines").appendChild(p8);
 
-
 let p9 = document.createElement("p");
 p9.innerHTML = " Taker Buy Base Asset Volume: " + Math.floor(data5[0][9]) + ('$');
 document.getElementById("ETH_klines").appendChild(p9);
@@ -310,7 +310,6 @@ document.getElementById("ETH_klines").appendChild(p10);
     let formattedTime = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
     return formattedTime;
   }
-
 }
 
 let bnb_btn = document.querySelector("#bnb_btn");
@@ -319,7 +318,6 @@ let btc_btn = document.querySelector("#btc_btn");
 let BTC_klines = document.querySelector("#BTC_klines");
 let eth_btn = document.querySelector("#eth_btn");
 let ETH_klines = document.querySelector("#ETH_klines");
-
 
 bnb_btn.addEventListener('click', (e) =>  {
  if(e.target.matches('#bnb_btn') === true){
